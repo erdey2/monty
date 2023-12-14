@@ -2,8 +2,7 @@
 
 /**
  * get_stream - gets a line from a file
- *@filename - the name of the file
- *
+ * @filename: the name of the file
  */
 void get_stream(char *filename)
 {

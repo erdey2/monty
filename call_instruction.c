@@ -2,7 +2,7 @@
 
 /**
  * call_instruction - call instruction to be run
- * 
+ *
  * Return: void
  */
 void call_instruction(void)

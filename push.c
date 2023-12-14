@@ -2,8 +2,8 @@
 
 /**
  * push - push an element to the top of the stack
- * @stack - the user defined data structure
- * @line_cnt - the line number
+ * @stack: the user defined data structure
+ * @line_number: the line number
  *
  * Return: void
  */

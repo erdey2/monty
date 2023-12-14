@@ -2,7 +2,7 @@
 
 /**
  * free_stack - frees the stack
- * @head - the address of the first node
+ * @head: the address of the first node
  *
  * Return: void
  *

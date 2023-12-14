@@ -5,7 +5,7 @@
  *
  * Return - void
  */
-void initialize_args()
+void initialize_args(void)
 {
 	arguments = malloc(sizeof(arg_t));
 	if (arguments == NULL)

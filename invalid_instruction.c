@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /**
- * invalid_instruction - handle an in valid instruction 
+ * invalid_instruction - handle an in valid instruction
  *
  * Return: void
  */

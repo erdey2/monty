@@ -1,7 +1,5 @@
 #include "monty.h"
 
-arg_t *arguments = NULL;
-
 /**
  * err_usage - check the number of arguments
  *
@@ -15,7 +13,7 @@ void err_usage(void)
 
 /**
  * err_file - check if the file is exist
- * @filename - the name of the file
+ * @filename: the name of the file
  *
  * Return: void
  */
@@ -28,8 +26,8 @@ void err_file(char *filename)
 
 /**
  * main - the entry point
- * @argc - number of arguments
- * @argv - array of pointer strings
+ * @argc: number of arguments
+ * @argv: array of pointer strings
  *
  * Return: 0 always success
  */
