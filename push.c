@@ -18,17 +18,30 @@ void push(stack_t **stack, unsigned int line_number)
 	*stack = malloc(sizeof(stack_t));
 	if (*stack == NULL)
 	{
-		fprintf(stderr, "L%d: usage: push integer\n", line_number);
-		free_arguments();
+		fprintf(stderr, "L%d: usage: push integer", line_number);
 		exit(EXIT_FAILURE);
 	}
 	(*stack)->next = (*stack)->prev = NULL;
 	(*stack)->n = (int) atoi(arguments->tokens[1]);
-	if (arguments->head != NULL)
+	if (arguments->head == NULL)
+		arguments->head = *stack;
+	else
 	{
-		(*stack)->next = arguments->head;
-		arguments->head->prev = *stack;
+		if (arguments->stack)
+		{
+			(*stack)->next = arguments->head;
+			arguments->head->prev = *stack;
+			arguments->head = *stack;
+		}
+		else
+		{
+			stack_t *tmp = arguments->head;
+
+			while (tmp->next)
+				tmp = tmp->next;
+			tmp->next = *stack;
+			(*stack)->prev = tmp;
+		}
 	}
-	arguments->head = *stack;
 	arguments->stack_length += 1;
 }

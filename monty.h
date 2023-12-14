@@ -1,7 +1,7 @@
 #ifndef MONTY_H
 #define MONTY_H
 
-#define  _GNU_SOURCE
+#define _GNU_SOURCE
 #include <stdio.h>
 #include <stdlib.h>
 #include <stddef.h>
@@ -59,6 +59,8 @@ typedef struct arg_s
 	int stack;
 } arg_t;
 
+extern arg_t *arguments;
+
 void get_stream(char *filename);
 void initialize_args();
 void err_file(char *filename);
@@ -78,7 +80,5 @@ void free_stack(stack_t *head);
 
 void push(stack_t **stack, unsigned int line_number);
 void pall(stack_t **stack, unsigned int line_number);
-
-extern arg_t *arguments;
 
 #endif

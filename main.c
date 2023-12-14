@@ -46,7 +46,7 @@ int main(int argc, char *argv[])
 		split_line();
 		get_instruction();
 		call_instruction();
-		free_arguments();
+		free_tokens();
 	}
 	close_stream();
 	free_arguments();

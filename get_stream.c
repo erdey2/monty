@@ -11,7 +11,7 @@ void get_stream(char *filename)
 	fd = open(filename, O_RDONLY);
 	if (fd < 0)
 		err_file(filename);
-	arguments->stream = fopen(filename, "r");
+	arguments->stream = fdopen(fd, "r");
 	if (arguments->stream == NULL)
 	{
 		close(fd);
