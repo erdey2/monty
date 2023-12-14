@@ -1,5 +1,6 @@
 #include "monty.h"
 
+arg_t *arguments = NULL;
 /**
  * err_usage - check the number of arguments
  *
