@@ -7,7 +7,7 @@
  */
 void swap(stack_t **stack, unsigned int line_number)
 {
-	stack_t *tmp1, *tmp2;
+	stack_t *temp1, *temp2;
 
 	(void) stack;
 	if (arguments->stack_length < 2)
@@ -16,13 +16,13 @@ void swap(stack_t **stack, unsigned int line_number)
 		exit(EXIT_FAILURE);
 	}
 
-	tmp1 = arguments->head;
-	tmp2 = tmp1->next;
-	tmp1->next = tmp2->next;
-	if (tmp1->next)
-		tmp1->next->prev = tmp1;
-	tmp2->next = tmp1;
-	tmp1->prev = tmp2;
-	tmp2->prev = NULL;
-	arguments->head = tmp2;
+	temp1 = arguments->head;
+	temp2 = temp1->next;
+	temp1->next = temp2->next;
+	if (temp1->next)
+		temp1->next->prev = temp1;
+	temp2->next = temp1;
+	temp1->prev = temp2;
+	temp2->prev = NULL;
+	arguments->head = temp2;
 }
