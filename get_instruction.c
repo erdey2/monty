@@ -12,6 +12,8 @@ void get_instruction(void)
 		{"push", &push}, {"pall", &pall},
 		{"swap", &swap}, {"nop", &nop},
 		{"add", &add}, {"pop", &pop},
+		{"sub", &sub}, {"divv", &divv},
+		{"mul", &mul}, {"mod", &mod},
 		{NULL, NULL}
 	};
 	if (arguments->n_tokens == 0)
